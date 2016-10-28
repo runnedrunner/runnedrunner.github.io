@@ -1,2 +1,0 @@
-# mynuevaschool
-Classadoo generated repo
