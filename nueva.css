@@ -1,0 +1,234 @@
+  @CHARSET "UTF-8";
+/* Signin Form */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="text"] {
+  margin: 0 0 10px 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  /*border-top-left-radius: 0;
+  border-top-right-radius: 0;*/
+}
+/* end of signin form */
+
+.table thead th, .table thead tr th, .table tr td,  .table tbody tr td{ 
+  border-top: none; 
+  border-bottom: none;
+  padding-bottom: none;
+}
+
+#navContainer .navbar-default{
+  background-color:#ceebf3;
+  background-image: linear-gradient(to bottom, #ceebf3 0px, #ceebf3 100%);
+}
+
+#navContainer .navbar{
+  min-height: 2px;
+}
+
+.ui-widget-header {
+  background-color: rgb(0, 130, 187) !important;
+  background-image: none;
+}
+
+.ui-widget-header{
+  color: #333 !important;    
+}
+
+/* menu dropdown */
+.dropdown:hover {
+  background-color:#3296c3;
+  border-radius:5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;  
+}
+.dropdown-menu {
+  margin-top: 0px;
+  background-color:#ceebf3;
+  border-top: none;
+  padding-left:0px;
+  margin-bottom:0px;
+}
+
+.dropdown-menu > li > a:hover{
+  background-color:#3296c3 !important;
+  background-image: none;
+}
+
+.navbar-nav > li > a {
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+#navContainer .navbar{
+  margin-bottom: 0px;
+}
+/* end menu drop down */
+
+#innercontent > table {
+  border-collapse: inherit;
+}
+
+/* border */
+.gray-border {
+  background-color: #F0F0F0;
+  position:relative;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #ccc;	
+}
+
+.gray-border::before {
+  width: 100%;
+  border: 1px solid #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;  
+}
+
+.border-left, .border-right { position: relative; }
+.border-left:before, .border-right:after {
+  position: absolute;
+  width: 0;
+  border-left: 1px solid #fff;
+  height: 100%
+    top: 0px;
+}
+.border-left:before { left: -11px; }
+.border-right:after { right: -10px; }
+
+/* Override bootstrap css - sets blog table cell paddings to 10px */
+.blogContainer table td{
+  padding: 10px;
+}
+
+/* buttons */
+html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 3px;
+  /*   
+  line-height: 1.5;
+  background-image: linear-gradient(to bottom, #fff 0px, #e0e0e0 100%);
+  background-repeat: repeat-x;
+  border-color: #ccc;*/
+  /*text-shadow: 0 1px 0 #fff;*/
+  /*box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);*/
+}
+
+html input[type="button"], input[type="reset"], input[type="submit"]:hover {
+  background-color: #ccc;
+  background-position: 0px -15px; 
+}
+
+/*
+html header input[type="submit"]:hover {
+background-color: #eb9316 !important;
+background-position: 0px -15px; 
+}
+
+html header input[type="button"], input[type="reset"], input[type="submit"]:hover {
+background-color: #eb8316;
+}
+*/
+#innercontent hr {
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+/*input checkbox and radio button margin not enough*/
+html input[type="radio"], input[type="checkbox"], input[type="text"] {
+  margin:0 4px 4px 4px;
+}
+/* override the bootstrap printing url */
+@media print {
+  a[href]:after {
+    content: none;
+  }
+}
+
+/* FOR new navbar 9/9/2014*/
+/*reset a back to bootstrap default */
+.navbar {
+  margin-bottom: 0px ! important;
+}
+.navbar-default .navbar-nav > li > a {
+  padding: 15px 7px;
+  color: #fff;
+}
+/* logo */
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-default {
+  background-color: rgb(0, 130, 187) !important;
+  background-image: none;
+
+}
+/* set margin to auto for earch box */
+html .navbar-nav .navbar-form input[type="text"] {
+  margin:auto;
+}
+
+/* body { padding-top: 50px; } */
+
+/* @media screen and (min-width: 700px, max-width: 970px) {
+body { padding-top: 150px; }
+} */
+
+.modal-dialog label{
+  font-weight: 700;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+
+
+
+/* @media only screen and (max-width: 480px), only screen and (max-device-width: 640px) { ul.nav li.dropdown:hover ul.dropdown-menu{ display: none; } }
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:active>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:active>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+*/
