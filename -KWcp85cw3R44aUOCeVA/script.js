@@ -33,7 +33,6 @@ setInterval(function() {
 
 
 
-var $visibleElements = $(":visible");
 
 var random255 = function () {
   return Math.floor(Math.random()*255);
@@ -43,7 +42,7 @@ var randomColor = function () {
 }
 
 var doWork = function () {
-  $visibleElements.each(function () {
+  $("#by-letter-fade").each(function () {
     $(this).css("backgroundColor",randomColor());
   });	
 }
