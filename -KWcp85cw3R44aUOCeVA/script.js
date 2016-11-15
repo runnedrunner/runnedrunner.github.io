@@ -42,8 +42,7 @@ var randomColor = function () {
 }
 
 var doWork = function () {
-    $("#seizure").css("backgroundColor",randomColor());	
-    console.log(randomColor());
+    $("#seizure").css("color",randomColor());	
 }
 
 // //UI-blocking version, page will stop responding
