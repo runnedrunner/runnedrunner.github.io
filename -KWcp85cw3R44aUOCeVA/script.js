@@ -42,7 +42,7 @@ var randomColor = function () {
 }
 
 var doWork = function () {
-  $("#by-letter-fade").each(function () {
+  $("#seizure").each(function () {
     $(this).css("backgroundColor",randomColor());
   });	
 }
