@@ -31,7 +31,7 @@ formattedExample.text(functionString);
 
 consoleLogExample.html(formattedExample);
 
-var functionString = "thing";
+var functionString = "";
 console.log(functionString)
 var consoleLogExample = $("#jquery-example")
 
