@@ -46,10 +46,10 @@ var doWork = function () {
     $("#thing").css("backgroundColor",randomColor);
 }
 
-// //UI-blocking version, page will stop responding
-// for(var i=0; i<=10000; i++) {
-//     doWork();
-// }
+ //UI-blocking version, page will stop responding
+ for(var i=0; i<=10000; i++) {
+     doWork();
+ }
 
 //Non-UI-blocking version
 var i=0;
