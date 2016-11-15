@@ -1,3 +1,4 @@
+// noprotect
 var shown = true
 setInterval(function() {
   if (shown) {
@@ -47,9 +48,9 @@ var doWork = function () {
 }
 
  //UI-blocking version, page will stop responding
- for(var i=0; i<=10000; i++) {
-     doWork();
- }
+// for(var i=0; i<=10000; i++) {
+//     doWork();
+// }
 
 //Non-UI-blocking version
 var i=0;
