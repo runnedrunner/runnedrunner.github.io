@@ -42,3 +42,15 @@ var formattedExample = $("<pre>")
 formattedExample.text(functionString);
 
 consoleLogExample.html(formattedExample);
+
+var functionString = '$("#button").click(function () {' +
+    '\n    console.log("hi!");' +
+    '\n});';
+console.log(functionString)
+var consoleLogExample = $("#bootstrap-example")
+
+var formattedExample = $("<pre>")
+
+formattedExample.text(functionString);
+
+consoleLogExample.html(formattedExample);
