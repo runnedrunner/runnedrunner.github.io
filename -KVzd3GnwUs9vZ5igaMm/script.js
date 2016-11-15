@@ -8,7 +8,7 @@ function coolfunction(args) {
   return args;
 }
 
-$("#button" ).click(function thing() {
+$("#button" ).click(function () {
   console.log("hi!");
 });
 var functionString = coolfunction.toString();
@@ -31,7 +31,9 @@ formattedExample.text(functionString);
 
 consoleLogExample.html(formattedExample);
 
-var functionString = thing.toString();
+var functionString = "$("#button" ).click(function () {
+console.log("hi!");
+});";
 console.log(functionString)
 var consoleLogExample = $("#jquery-example")
 
