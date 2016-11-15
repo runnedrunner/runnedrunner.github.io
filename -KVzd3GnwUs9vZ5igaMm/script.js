@@ -31,9 +31,9 @@ formattedExample.text(functionString);
 
 consoleLogExample.html(formattedExample);
 
-var functionString = "$("#button" ).click(function () {
-console.log("hi!");
-});";
+var functionString = '$("#button" ).click(function () {' +
+'\n    console.log("hi!");' +
+'\n});';
 console.log(functionString)
 var consoleLogExample = $("#jquery-example")
 
