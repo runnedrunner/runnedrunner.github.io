@@ -43,9 +43,7 @@ formattedExample.text(functionString);
 
 consoleLogExample.html(formattedExample);
 
-var functionString = '$("#button").click(function () {' +
-    '\n    console.log("hi!");' +
-    '\n});';
+var functionString = 'boostrap';
 console.log(functionString)
 var consoleLogExample = $("#bootstrap-example")
 
