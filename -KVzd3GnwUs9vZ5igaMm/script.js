@@ -43,7 +43,7 @@ formattedExample.text(functionString);
 
 consoleLogExample.html(formattedExample);
 
-var functionString = 'boostrap';
+var functionString = '<button type="button" class="btn btn-primary">Primary</button>';
 console.log(functionString)
 var consoleLogExample = $("#bootstrap-example")
 
