@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Afterworld Project</title>
+
+    <script src="http://olado.github.io/doT/doT.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="dedalus.js"></script>
+    <script src="dedalus-web.js"></script>
+
+    <link rel="stylesheet" href="themes/rlyeh/story.css">
+
+ </head>
+<body>
+    <div id="story">
+
+        <initscript>
+        </initscript>
+
+        <beforeEveryThing>
+        </beforeEveryThing>
+
+        <beforeEveryPageTurn>
+        </beforeEveryPageTurn>
+
+        <beforeEveryParagraphShown>
+        </beforeEveryParagraphShown>
+
+        <afterEveryThing>
+        </afterEveryThing>
+
+        <afterEveryPageTurn>
+        </afterEveryPageTurn>
+
+        <afterEveryParagraphShown>
+        </afterEveryParagraphShown>
+
+        <!-- Novel -->
+        <title>Afterworld Project</title>
+
+        <!-- Objects -->
+        <!-- <obj id="dummyObject" inventoryName="A rock">
+            <action id="Examine">
+              Yikes, this rock looks hellish. You must be in hell.
+            </action>
+
+            <action id="Pick Up">
+                <when>!story.isInInventory('dummyObject')</when>
+                As you try to pick it up... nothing happens... you get a rock!
+                {{ story.putInInventory('dummyObject'); }}
+            </action>
+
+        </obj> -->
+
+        <!-- Pages -->
+        <page id="intro">
+          <div>Green. Green everywhere.</div>
+
+          <div>Somehow you happened to come upon a dorm room. You hear a knock on the <turn to="1page">door</turn>.</div>
+        </page>
+        <page id="1page">
+          <div>You open the door.</div>
+          There's an attendant outside.
+          <div>“Mr. Potter, it is time..,” the attendant starts to say.  </div>
+          “Where am I?” you interject.
+          <div>
+“Oh, you are in one of the afterworlds, the labor camp, you must have been too bad for Chuck E. Cheese but too good for a Justin Bieber Concert, you are going to get sorted,” she replies.
+</div>
+<div>
+You follow the attendant to a large building. Taking a deep breath, you enter the <turn to="2page">building</turn>.
+</div>
+        </page>
+        <page id="2page">
+          You see a dimly lit room with an old hat on the table. The attendant reaches for the hat and gives it to you.
+ Confused, you put the Sorting Hat on top of your head. You look around expecting something to happen.
+<div>“Hello.”</div>
+The Sorting Hat talked! “You are a...”
+<div><turn to="procrastinator">Procrastinator</turn></div>
+<div><turn to="plagiarizer">Plagiarizer</turn></div>
+<div><turn to="troll">Troll</turn></div>
+
+        </page>
+        <!-- <page id="dummyPage" class="first">
+            Hi <show paragraph="dummyParagraph">Bobberino Bobzzy BOBBOBOBOBOB</show>.
+
+            <p>Quite unsurprisingly, there is even a <interact with="dummyObject">rock</interact> lying around.</p>
+
+            <paragraph id="dummyParagraph">
+              <p>You look around and decide to go down a <turn to="otherPage">hole</turn></p>
+            </paragraph>
+        </page>
+
+        <page id="otherPage">
+            Plot twist! You die. No more hell for you.
+            {{ story.endGame(); }}
+        </page>  -->
+
+        <page id="procrastinator">
+          “You are a Procrastinator,” the Sorting Hat finally decided.
+ You gingerly place the hat down, and rush out of the building. Turning left, you see a long conveyor belt with a huge amount of boxes coming out. You open the box to find a large toy. The attendant leads you towards a group of people, a lot of them older men with business suits, rushing to create toys and placing them into boxes. You glance at the group again, asking, “What am I going to do?”
+<div>“You are to assemble 700 toys a day,” the attendant replies, “Having such a short deadline is supposed to discourage you from procrastination. You will begin in one day.”</div>
+        </page>
+        <page id="plagiarizer">
+  “You are a Plagiarizer,” the Sorting Hat finally decided.
+  You gingerly place the hat down, and head out of the building. Turning right, you see a long conveyor belt with boxes coming out. You open the box to find a large toy. The attendant leads you towards a group of people. You see a lot of familiar faces, including a civil rights activist. You look at the attendant, asking, “What am I going to do?”
+
+<div>“You are to assemble toys for 7 hours a day,” the attendant replies, “It is supposed to make you grateful for the hard work of others. You also are are giving your work away with no recognition, like what you did with someone else's ideas.”</div>
+        </page>
+        <page id="troll">
+          “You are an Internet Troll,” the Sorting Hat finally decided. You gingerly place the hat down, and head out of the building. Going around a gate, you see a person on a unicycle juggling balls, entertaining a group of people. You notice that the person juggling balls seems to be Ken M, one of Time Magazine’s most influential people on the Internet.
+          You look at the attendant, asking, “What am I going to do?”
+<div>“You are to entertain a crowd for 2 hours each day,” the attendant replies, “since you trolled others behind a wall without showing your face, they will now see a face while you entertain them.”</div>
+        </page>
+    </div>
+
+    <div id="wrapper">
+        <div id="title"></div>
+
+        <div id="inventoryHostWrapper">
+            <h2>Inventory</h2>
+            <div id="inventoryHost"></div>
+        </div>
+
+        <div id="host"></div>
+    </div>
+
+    <div id="interactionHost"></div>
+
+    <div id="undoStageHost"></div>
+
+    <div id="footer">
+        <a id="undoHost" href="#">Undo</a> &bull; <a id="saveHost" href="#">Save</a> &bull; <a id="restoreHost" href="#">Restore</a> &bull; <a id="reseteHost" href="#">Reset</a>
+    </div>
+
+    <script>
+        $(function () {
+            new DedalusWeb({
+                domSource         : $('#story'),
+                domTarget         : $('#host'),
+                titleTarget       : $('#title'),
+                inventoryTarget   : $('#inventoryHost'),
+                interactionTarget : $('#interactionHost'),
+                undoTarget        : $('#undoHost'),
+                undoStageTarget   : $('#undoStageHost'),
+                saveTarget        : $('#saveHost'),
+                restoreTarget     : $('#restoreHost'),
+                resetTarget       : $('#reseteHost'),
+            });
+        });
+
+    </script>
+</body>
+</html>
